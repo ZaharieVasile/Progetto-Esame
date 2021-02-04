@@ -75,4 +75,4 @@ client.on('message', message => {
     }
 });
 
-client.login('ODA2ODMxMDcyNTgyMDQxNjQy.YBvJ_Q.iVWLxNiD7PqKW-4iTBMgKSPdjVI'); //serve per collegare il codice al bot discord
+client.login(''/*qui ci va il token */); //serve per collegare il codice al bot discord
