@@ -156,6 +156,9 @@ client.on('message', message => {
     else if(command === 'stop'){
         client.commands.get('music').Stop(message, args);
     }
+    else if(command === 'list'){
+        client.commands.get('music').List(message, args);
+    }
     else if(command === 'clear'){
         client.commands.get('clear').execute(message, args);
     }

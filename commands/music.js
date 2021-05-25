@@ -59,7 +59,7 @@ module.exports = {
                 song = { title: video.title, url: video.url }
             }
             else{ //sennò avvisiamo dell'errore
-                message.reply(" non è stato trovato alcun risultato inerente alla tua ricerca");
+                return message.reply(" non è stato trovato alcun risultato inerente alla tua ricerca");
             }
         }
 
@@ -124,6 +124,20 @@ module.exports = {
         //questo comando serve per finire la "connessione" alla canzone che si sta ascoltando
         //e passare alla prossima della lista
         server_queue.connection.dispatcher.end();
+    },
+
+    //comand per mostare l'attuale lista di canzoni del server
+    async List(message, args){
+        if(!message.member.voice.channel){
+            return message.reply(" devi essere all'interno di un canale vocale per usare questo comando!");
+        }
+        
+        var list = "";
+        for(var i=0; i<server_queue.songs.length;i++){
+            list += JSON.stringify(server_queue.songs[i].title) + "\n";
+        }
+        console.log(list);
+        await server_queue.text_channel.send(`🎶 Playlist:\n` + list);
     }
 }
 
