@@ -161,7 +161,7 @@ client.on('message', message => {
     }
 });
 //qui ci va il token 
-client.login(/*'ODA2ODMxMDcyNTgyMDQxNjQy.YBvJ_Q.hUwB1YHrwedSDNHW1dTbBaHu7IY'*/); //serve per collegare il codice al bot discord
+client.login(); //serve per collegare il codice al bot discord
 
 ///https://discord.com/developers/applications/806831072582041642/bot
 ///https://www.youtube.com/watch?v=HCjwncsTVzQ
